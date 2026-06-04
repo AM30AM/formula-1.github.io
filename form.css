@@ -18,7 +18,7 @@
 .map_container {
   width: 100;
   position: relative; /* обязательно для работы псевдоэлемента */
-  background-image: url("img/monaco.jpg");
+  background-image: url("/img/monaco.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
