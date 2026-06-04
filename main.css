@@ -177,7 +177,7 @@ header nav ul li a:hover {
     }
 }
 
-@media screen and (max-width: 350px){
+@media screen and (max-width: 700px){
     /*container*/
     header .formula-1 {
         font-size: 20px;
