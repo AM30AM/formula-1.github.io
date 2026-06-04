@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap');
+
+.map_container {
+    margin-top: 80px;
+}
+
+.map_container h1 {
+    margin-top: 100px;
+    color: white;
+}
+
+.map {
+    margin: 80px;
+    text-align: center;
+}
+
+.map_container {
+  width: 100;
+  position: relative; /* обязательно для работы псевдоэлемента */
+  background-image: url(/img/monaco.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+   background-attachment: fixed;
+}
+
+.map_container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0; /* чтобы фон был под контентом */
+}
+
+.content {
+  position: relative;
+  z-index: 2; /* контент поверх всех слоёв */
+  color: white; /* белый текст для контраста */
+  padding: 20px;
+}
+
+.form_container h1 {
+    color: white;
+}
+
+/* Контейнер для центрирования формы */
+.form_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  box-sizing: border-box;
+}
+
+/* Стили для формы */
+.contact-form {
+  width: 100%;
+  max-width: 500px; /* Ограничиваем максимальную ширину */
+  background: rgb(37, 37, 37, 0.8);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для полей ввода */
+.input,
+.textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e1e1e1;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: rgba(90, 0, 0);
+  box-shadow: 0 0 0 3px rgba(90, 0, 0, 0.2);
+}
+
+/* Стиль для текста в textarea */
+.textarea {
+  resize: vertical; /* Позволяем изменять высоту */
+  min-height: 120px;
+}
+
+/* Красивая кнопка */
+.submit-btn {
+  background: linear-gradient(135deg, rgba(90, 0, 0), rgba(90, 0 ,0));
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(90, 0, 0, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Стили таблицы */
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 12px 0;
+  vertical-align: top;
+}
+
+td:first-child {
+  width: 30%;
+  text-align: right;
+  padding-right: 15px;
+  font-weight: 500;
+}
+
+
+@media screen and (max-width: 700px) {
+
+  .map_container {
+    margin-top: 40px;
+  }
+
+  .map_container h1 {
+      margin-top: 30px;
+      color: white;
+  }
+
+  .map {
+    display: flex;
+    justify-content: center;
+    width: 100% !important;
+    margin-left: 0px;
+    margin-bottom: 40px;
+  }
+
+  .map iframe {
+    margin: 0 auto;
+    width: 90% !important;
+    height: 300px !important;
+    display: block;
+    margin:  0 auto !important;
+  }
+
+  table, tbody, tr, td {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+
+  input {
+    width: 100% !important;
+    display: block;
+    height: 45px;
+  }
+
+  td:first-child {
+    text-align: left;
+  }
+}

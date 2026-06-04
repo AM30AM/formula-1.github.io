@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap');
+
+.team_composition h1 {
+    color: rgb(90, 0, 0);
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 80px;
+}
+
+/* Общий контейнер */
+.gallery-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 76%; /* Ширина видимой части */
+    margin: auto;
+}
+
+/* Лента с фото */
+.gallery {
+    display: flex;
+    overflow-x: auto; /* Позволяет крутить мышкой/пальцем */
+    scroll-behavior: smooth; /* Плавная прокрутка */
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Скрываем стандартную полосу прокрутки (по желанию) */
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery_block img {
+    width: 800px;
+    height: 1100px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0; /* Чтобы картинки не сжимались */
+}
+
+.gallery_text {
+    text-align: center;
+    padding: 30px;
+    font-size: 30px;
+}
+
+/* Кнопки */
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.btn:hover { background: rgba(0,0,0,0.8); }
+
+.prev { left: -20px; }
+.next { right: -20px; }
+
+@media screen and (max-width: 700px) {
+    .gallery-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 81%; /* Ширина видимой части */
+    margin: auto;
+    }
+
+    .gallery_block img {
+    width: 500px;
+    height: 800px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0; /* Чтобы картинки не сжимались */
+}
+}
+
+@media screen and (max-width: 700px) {
+
+    .team_composition h1 {
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+
+
+    .gallery-wrapper {
+    max-width: 220px; /* Ширина видимой части */
+    margin-left: 50px;
+    }
+
+    .gallery_block img {
+    width: 200px;
+    height: 350px;
+    }
+
+    .gallery_text {
+        text-align: center;
+        padding: 0px;
+        font-size: 16px;
+    }
+
+    /* Кнопки */
+    .btn {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
+        border-radius: 50%;
+    }
+
+}

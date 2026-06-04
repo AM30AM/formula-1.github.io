@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap');
+
+
+
+.team_container {
+    margin-bottom: 100px;
+}
+
+.team_container h1 {
+    color: rgb(90, 0, 0);
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 80px;
+}
+
+.team_wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    gap: 80px;
+}
+
+.team_wrap_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.team_wrap_img {
+    width: 500px;
+    height: 381.33px;
+}
+
+.team_wrap_text {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 700px) {
+
+    .team_container {
+        margin-bottom: 80px;
+    }
+
+    .team_container h1 {
+        font-size: 25px;
+        margin-bottom: 50px;
+    }
+
+    .team_wrap {
+        gap: 30px;
+    }
+
+    .team_wrap_block {
+        gap: 10px;
+    }
+
+    .team_wrap_img {
+        max-width: 300px;
+        height: 240px;
+    }
+
+    .team_wrap_text {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+}
